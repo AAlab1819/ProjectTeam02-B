@@ -67,8 +67,53 @@ n = 5, k = 1
 ```	
 
 ### Greedy Approach
+The problem solved using the formulas made base on the problem.
+```
+d=2*k+1;
+q=n/d;
+r=n%d;
+if(r!=0)
+	q++;
+else
+	r=2*k;
+cout<<q<<endl;
+```
+The formula above is to print the amount of way to turn the Shashlik(s) for better cooking.
 
-
+```
+for(i=1+r/2;i<=n;i+=d)
+	cout<<i<<" ";
+```
+Then print which skewer can be turned.
 
 ### Dynamic Programing
+
+The problem can be solved by DP by memoization.\
+Memoization is a optimization technique where we stored the calculations so they don't need to be recalculated.\
+This technique is used by using array `a` , `val` and `last_val` , and then the `temp` to store the calculations.
+```
+int i = 0, a[10000] = {-100000000}, val = 0, last_val = -1000000000;
+while(val + k + 1<= n) {
+	val += k  + 1;
+	a[i++] = val;
+	last_val = val;
+	val += k;
+	}
+
+if(last_val + k < n) {
+	int temp = a[i-1] + 2*k + 1 - n;
+	for(int j = 0; j < i; j++) {
+		a[j] -= temp;
+	}
+	a[i++] = n;
+}
+cout << i << endl;
+```
+Those are used to print the amount of way to turn the skewer(s).\
+Then print which skewer to turn.
+```
+for(int k = 0; k < i; k++) {
+	cout<<a[k]<<" ";
+}	
+```
 
