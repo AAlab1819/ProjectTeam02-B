@@ -1,6 +1,6 @@
 # Solving Codeforces 1040 B using Greedy and Dynamic Programing
 
-This repository will solve Codeforce's problem 1040 B using Greedy approach and Dynamic Programing. We will also compare which approach is better.
+This repository will solve Codeforce's problem [1040B](https://codeforces.com/problemset/problem/1040/B) using Greedy approach and Dynamic Programing. We will also compare which approach is better.
 
 ## Team Member
 - Ferinzhy Halik
@@ -84,7 +84,9 @@ The formula above is to print the amount of way to turn the Shashlik(s) for bett
 for(i=1+r/2;i<=n;i+=d)
 	cout<<i<<" ";
 ```
-Then print which skewer can be turned.
+Then print which skewer can be turned.\
+Complexity:\
+Worst Case : O(n)
 
 ### Dynamic Programing
 
@@ -116,4 +118,12 @@ for(int k = 0; k < i; k++) {
 	cout<<a[k]<<" ";
 }	
 ```
+Complexity:\
+Worst Case : O(n)
+
+### Comparison
+
+
+
+
 
