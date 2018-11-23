@@ -86,7 +86,7 @@ for(i=1+r/2;i<=n;i+=d)
 ```
 Then print which skewer can be turned.\
 Complexity:\
-Worst Case : O(n)
+Worst Case : O(n)\
 [Solution](https://codeforces.com/contest/1040/submission/46118595)
 
 ### Dynamic Programing
@@ -120,7 +120,7 @@ for(int k = 0; k < i; k++) {
 }	
 ```
 Complexity:\
-Worst Case : O(n)
+Worst Case : O(n)\
 [Solution](https://codeforces.com/contest/1040/submission/46118666)
 
 ### Comparison
@@ -128,7 +128,7 @@ Worst Case : O(n)
 The Problem can be solved by Greedy approach and Dynamic Programing.\
 Using both of the approach has the same speed (31 ms).\
 So Dynamic Programing can solve this problem by memoization, where it remembers the calculation on finding the amount of way.\
-But this problem can be solved by greedy to by making the formula based on the explanation on the problem. 
+But this problem can be solved by greedy approach by making the formula based on the explanation on the problem. 
 
 
 
