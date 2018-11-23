@@ -124,6 +124,18 @@ Worst Case : O(n)\
 [Solution](https://codeforces.com/contest/1040/submission/46118666)
 
 ### Comparison
+These are the comparison between Greedy and Dynamic Programing of `n` and `k`.
+```
+			      Greedy		DP
+	N	K	|     TIME(ms)	|	TIME(ms)
+	7	2	|	0	|	15
+	5	1	|	0	|	15
+	10	0	|	15	|	15
+	10	1	|	15	|	30
+	10	10	|	15	|	15
+	11 	10	|	31	|	15
+	100	2	|	15	|	0
+```
 
 The Problem can be solved by Greedy approach and Dynamic Programing.\
 Using both of the approach has the same speed (31 ms).\
