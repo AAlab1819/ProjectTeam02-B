@@ -1,8 +1,10 @@
 #include<bits/stdc++.h>
+#include<omp.h>
 
 using namespace std;
 
 int main() {
+	double startTime=omp_get_wtime();
 	int n, k;
 	cin>>n>>k;
 
@@ -28,6 +30,7 @@ int main() {
 	}	
 
 	cout<<endl;
+	cout<<omp_get_wtime()-startTime<<endl;
 
 	return 0;
 }
