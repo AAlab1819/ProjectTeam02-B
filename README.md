@@ -38,17 +38,39 @@ output
 ## Explanation
 ### Problem Statement
 
-The problem is about finding the minimum amount of move to turn the Shashlik for better cooking.\
+The problem is about finding the minimum amount of move to turn the Shashlik for better cooking.
+```
+n = amount of shashlik
+k = the skewer(s) beside the shashlik that will be chosen and according to amount of way
+
+n = 3
+	8	8	8 	
+	8	8	8  \    
+	8	8	8   -- These are the Shashliks
+	8	8	8  /
+	|	|	| 
+
+	1 	2 	3
+
+k = 1
+- 2 as 1's k
+- 1 and 3 as 2's k
+- 2 as 3's k
+
+k = 2
+- 1 and 2 as 3's k
+- 2 and 3 as 1's k
+__________________________________________________________________________________
+
 Example :
 
-```
 n = 5, k = 1
 
- 8  8  8  8  8  \
- 8  8  8  8  8   \
- 8  8  8  8  8     -- These are the Shashliks
- 8  8  8  8  8   /
- |  |  |  |  |  /
+ 8  8  8  8  8  
+ 8  8  8  8  8   
+ 8  8  8  8  8     
+ 8  8  8  8  8  
+ |  |  |  |  |  
 
  1  2  3  4  5
 
@@ -78,7 +100,13 @@ else
 	r=2*k;
 cout<<q<<endl;
 ```
-The formula above is to print the amount of way to turn the Shashlik(s) for better cooking.
+The formula above is to print the amount of way to turn the Shashlik(s) for better cooking where :
+- `d` is the formula made to check the `k` form every index where `d = 2 * k + 1`.
+- `q` is a integer for dividing the amount of shashlik with the formula.
+- `r` is to count the remainder between the amount of shashilik and the formula.
+
+If there is a remainder, increment the `q`.\
+If There are no remainder, `r` become `2 * k`
 
 ```
 for(i=1+r/2;i<=n;i+=d)
