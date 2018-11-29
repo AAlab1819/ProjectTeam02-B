@@ -152,23 +152,15 @@ Worst Case : O(n)\
 [Solution](https://codeforces.com/contest/1040/submission/46118666)
 
 ### Comparison
-These are the comparison between Greedy and Dynamic Programing of `n` and `k`.
-```
-			      Greedy		DP
-	N	K	|     TIME(ms)	|	TIME(ms)
-	7	2	|	0	|	15
-	5	1	|	0	|	15
-	10	0	|	15	|	15
-	10	1	|	15	|	30
-	10	10	|	15	|	15
-	11 	10	|	31	|	15
-	100	2	|	15	|	0
-```
+These are the comparison between Greedy and Dynamic Programing of `n` and `k` based on Greedy and Dynamic Programing.\
+![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/Greedy.png?raw=true)\
+![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/DP.png?raw=true)\
+![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/Graph.png?raw=true)\
 
 The Problem can be solved by Greedy approach and Dynamic Programing.\
-Using both of the approach has the same speed (31 ms).\
 So Dynamic Programing can solve this problem by memoization, where it remembers the calculation on finding the amount of way.\
-But this problem can be solved by greedy approach by making the formula based on the explanation on the problem. 
+But this problem can be solved by greedy approach by making the formula based on the explanation on the problem.\
+Based on the graph, we believe approach by Greedy is faster than Dynamic Programing. 
 
 
 
