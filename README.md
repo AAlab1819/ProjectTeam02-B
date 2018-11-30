@@ -140,7 +140,16 @@ if(last_val + k < n) {
 }
 cout << i << endl;
 ```
-Those are used to print the amount of way to turn the skewer(s).\
+Those are used to print the amount of way to turn the skewer(s).
+- First we make a condition when `val + k + 1` is smaller or equal to `n`.
+- While it's still on this condition , `val` becomes `val + k + 1`.
+- Then the array `a` with current values `i = i + 1` becomes `val`.
+- And the `last_val` becomes `val` and then add `val` with `k`.
+- If the `last_val + k` is smaller then `n`, declare `temp`.
+- Where `temp` is equal too array `a` with value `i-1` + `2*k+1` - `n`.
+- Loop `j` value on arrat `a` where the array is subtracted with `temp` value.
+- And the array `a` with current values `i = i + 1` becomes `n`.
+
 Then print which skewer to turn.
 ```
 for(int k = 0; k < i; k++) {
@@ -152,15 +161,13 @@ Worst Case : O(n)\
 [Solution](https://codeforces.com/contest/1040/submission/46118666)
 
 ### Comparison
-These are the comparison between Greedy and Dynamic Programing of `n` and `k` based on Greedy and Dynamic Programing.\
+These are the comparison between Greedy and Dynamic Programing of `n` and `k` based on Greedy and Dynamic Programing with OpenMp.\
 ![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/Greedy.png?raw=true)\
 ![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/DP.png?raw=true)\
-![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/Graph.png?raw=true)\
+![](https://github.com/AAlab1819/ProjectTeam02-B/blob/master/Graph.png?raw=true)
 
 The Problem can be solved by Greedy approach and Dynamic Programing.\
 So Dynamic Programing can solve this problem by memoization, where it remembers the calculation on finding the amount of way.\
 But this problem can be solved by greedy approach by making the formula based on the explanation on the problem.\
-Based on the graph, we believe approach by Greedy is faster than Dynamic Programing. 
-
-
-
+Based on the graph, we believe approach by Greedy is faster than Dynamic Programing.\
+Approaching this problem by Dynamic Programing can be also faster if `n` value and `k` value is near or about the same like in the graph.
